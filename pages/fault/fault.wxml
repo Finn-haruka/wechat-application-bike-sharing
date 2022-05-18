@@ -1,0 +1,30 @@
+<!--pages/fault/fault.wxml-->
+<view class="wrapper">
+  <view class="head">
+    <text style="margin-bottom: 5rpx;">请选择故障类型</text>
+    <image src="/icon/系统报警.png"></image>
+  </view>
+  <view class="option">
+    <checkbox-group class="group" bindchange="option">
+      <block wx:for="{{oArray}}" wx:key="*this">
+        <view class="check-box">
+          <checkbox class="check" checked="{{item.checked}}" value="{{item.value}}">{{item.value}}</checkbox>
+        </view>
+      </block>
+    </checkbox-group>
+  </view>
+  <view class="oImg">
+    <text class="oImg-title">请对故障车辆拍照以便于确认损坏情况~</text>
+    <view class="photo" wx:for="{{photo}}" wx:key="*this">
+      <image src="{{item}}">
+        <icon size="20" type="clear" data-index="{{index}}" bindtap="clear"></icon>
+      </image>
+    </view>
+    <text class="img-text" bindtap="pat">{{oText}}</text>
+  </view>
+  <view class="num">
+    <input class="put1" data-index="1" bindinput="put" placeholder="车牌号" bindinput="input_no"></input>
+    <input class="put2" data-index="2" bindinput="put" placeholder="备注"></input>
+  </view>
+  <button type="primary" bindtap="submit">提交</button>
+</view>

@@ -1,0 +1,79 @@
+/* pages/more/more.wxss */
+page {
+  background: #eeeef3;
+}
+
+.swiper-continer{
+  width: 750rpx;
+  height: 375rpx;
+}
+
+cover-image{
+  position: absolute;
+  bottom: 100rpx;
+  height: 100rpx;
+  width: 120rpx;
+
+}
+
+.view1{
+  width: 100%;
+  height: 650rpx;
+  border:1rpx solid black;
+  background-color: rgb(236, 253, 208);
+}
+.view2{
+  width: 100%;
+  height: 150rpx;
+  background-color: rgb(208, 241, 255);
+}
+.wallet{
+  left:43%;
+  bottom: 55%;
+  /* border:8rpx solid green; */
+}
+.map{
+  left:8%;
+  bottom:32%;
+}
+.reserve{
+  right: 8%;
+  bottom:32%;
+}
+
+.position{
+  display: flex;
+}
+.qb{
+  left:45%;
+  bottom: 49%;
+}
+.dt{
+  left:9%;
+  bottom: 26%;
+}
+.yy{
+  right:7%;
+  bottom: 26%;
+}
+
+.share{
+  left:30%;
+  bottom:22%;
+  width: 130px;
+  height:130px;
+}
+
+.item_wel{
+  display:flex;
+  font-size:38rpx;
+  font-family: "黑体";
+  margin-left: 27%;
+  font-weight: 700;
+}
+.item_focus{
+  font-size:32rpx;
+  position: center;
+  bottom: 5%;
+}
+

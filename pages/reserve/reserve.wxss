@@ -1,0 +1,184 @@
+/* pages/reserve/reserve.wxss */
+page{ 
+  background: #f5f5f5; 
+  /* 避免左侧Item不够时 被白色覆盖*/
+ } 
+ .header{
+   width: 100%;
+   height: 350rpx;
+   /* background-color: gray; */
+ }
+ .login-icon{ 
+  flex: none; 
+ } 
+  
+ .login-img{ 
+  width: 750rpx;
+  height: 350rpx;
+ } 
+ /* 2.主盒子 */
+ .container { 
+  width: 100%; /* 宽度占屏幕的100% */
+  height: 825rpx; /* 高度占屏幕的100% */
+  /* background-color: rgb(203, 250, 244); 背景颜色 */
+ }
+ /* 3.左盒子*/
+  /* 3.1. 左侧栏主盒子总体设置 */
+ .nav_left{ 
+  position:absolute; /* 使用绝对定位 */
+  left:0px; /* 距离左边距：0px */
+  width: 22%; /* 每个item所占的宽度 */
+  background: #f5f5f5; /* 主盒子设置背景色为灰色 */
+  text-align: center; /* 文字居中显示 */
+ }
+ /* 3.2. 左侧栏的每个item */
+ .nav_left .nav_left_items{ 
+  height: 40px; /* 每个item高40px*/
+  padding: 6px 0; /* 上内边距和下内边距是 6px[增加高度] 右内边距和左内边距是 0px*/
+  border-bottom: 1px solid #dedede; /* 设置下边线 */
+  font-size: 14px; /* 设置文字大小：14px */
+ } 
+ /* 3.3. 左侧栏list的item被选中时*/
+ .nav_left .nav_left_items.active{ 
+  background: #fff; /* 背景色变成白色 */
+  color: #3385ff; /* 字体编程蓝色 */
+  border-left: 3px solid #3385ff; /* 设置边框的宽度以及颜色 */
+ }
+ /* 4.右盒子 */
+ /* 4.1. 右侧栏主盒子总体设置 */
+ .nav_right{ 
+  position: absolute; /* 使用绝对定位 */
+  left: 65px; /* 距离左边距：80px */
+  width: 80%; /* 右侧主盒子所占宽度 */
+  height: 830rpx; /* 右侧主盒子所占高度 */
+  padding: 5px; /* 所有 4 个内边距都是 10px*/
+  box-sizing: border-box; /* 为元素指定的任何内边距和边框都将在已设定的宽度和高度内进行绘制*/
+  background: rgb(203, 250, 244); /* 右侧主盒子背景颜色 */
+ }
+ /* 4.2. 右侧栏中的每个item */
+ .nav_right .nav_right_items{ 
+  float: left; /* 浮动向左 */
+  width: 33.33%; /* 每个item设置宽度是33.33% */
+  height: 120px; /* 每个item设置高度是120px */
+  text-align: center; /* 设置图片下方的提示文字居中显示 */
+ } 
+ /* 4.3. 右侧栏中的每个item的图样式设置 */
+ .nav_right .nav_right_items image{ 
+  width: 60px; /* 给图片设置宽度 */
+  height: 60px; /* 给图片设置高度 */
+  margin-top: 15px; /* 图片距离上边距15px */
+  border-radius: 40%; /* 给图片添加圆角边框 */
+ }
+
+ .tap{
+   width: 500rpx;
+   height: 475rpx;
+ }
+ .select_box{
+  width:500rpx;
+  height:100rpx;
+  border-radius: 25rpx;
+  border:black solid 2px;
+  position: relative;
+  margin-left: 35rpx;
+  margin-top:20rpx;
+}
+.select_box .select{
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border-radius: 8rpx;
+  display: flex;
+  align-items: center;
+  padding: 0 10rpx;
+}
+.select_box .select .select_text{
+  font-size: 35rpx;
+  color: #777777;
+  line-height: 28rpx;
+  flex: 1;
+}
+.select_box .select .select_img{
+  width: 30rpx;
+  height: 30rpx;
+  display: block;
+  transition:transform 0.3s;
+}
+.select_box .select .select_img_rotate{
+  transform:rotate(180deg); 
+}
+.select_box .option_box{
+  position: absolute;
+  top: calc(100% - 1px);
+  width: 100%;
+  box-sizing: border-box;
+  height: 0rpx;
+  overflow-y: auto;
+  background: #fff;
+  transition: height 0.3s;
+  border-left:1px solid #efefef;
+  border-right:1px solid #efefef;
+}
+.select_box .option_box .option{
+  display: block;
+  line-height: 45rpx; 
+  font-size: 26rpx;
+  border-top: 1px solid #efefef;
+  border-bottom: 1px solid #efefef;
+  padding: 10rpx;
+}
+.submit { 
+  width: 100%; 
+  height: 240rpx; 
+  /* background-color:#DCDCDC;  */
+  display: flex;
+ } 
+  
+ .loginBtn { 
+  margin-left: 0;
+  width: 80px; 
+  height: 45px;
+  margin-left: 5%;
+  margin-top: 30px; 
+  border-radius:10px;
+ }
+ .quitBtn { 
+  margin-right: 0;
+  width: 80px; 
+  height: 45px;
+  border-radius:10px;
+  margin-top: 30px; 
+  margin-right: 5%;
+ }
+
+ .getInfo{
+   margin-left:115rpx;
+   margin-top:20rpx;
+ }
+
+ .blank{
+   width: 100%;
+   height: 142rpx;
+   border-top:black solid 2px;
+   
+ }
+.input_content{
+  width: 100%;
+  height: 120rpx;
+  margin-top: 10rpx;
+  margin-left: 10rpx;
+  position: relative;
+}
+.input_image{
+  width: 200rpx;
+  height: 120rpx;
+  float: left;
+  margin-right: 20rpx;
+}
+.input_text{
+  margin-left: 10rpx;
+  width: 500rpx;
+  height: 100rpx;
+  font-size: 38rpx;
+  /* font-family: 楷体; */
+}

@@ -1,0 +1,33 @@
+<!--pages/more/more.wxml-->
+<swiper class="swiper-continer" indicator-dots indicator-color="white" 
+indicator-active-color="black" autoplay interval="3000" circular>
+ <!-- 轮播图 -->
+  <swiper-item>
+   <image src="/icon/yfl.png" mode="heightFix"> </image>
+</swiper-item>
+<!-- 第二 -->
+   <swiper-item>
+    <image  src="/icon/bike3.png"></image>
+   
+</swiper-item>
+<!-- 第三 -->
+    <swiper-item>
+      <image src="/icon/bike4.png"></image>
+    </swiper-item>
+</swiper>
+
+<view class="view1">
+  <cover-image catchtap="click" id="2" class="map" src="/icon/地图.png"></cover-image>
+  <cover-image catchtap="click" id="3" class="reserve" src="/icon/预约.png"></cover-image>
+  <!-- <cover-image catchtap="click" id="4" class="event" src="/icon/活动.png"></cover-image> -->
+  <cover-image catchtap="click" id="1" class="wallet" src="/icon/钱包.png"></cover-image>
+  <cover-image class="qb" src="/icon/qb.png"></cover-image>
+  <cover-image class="dt" src="/icon/dt.png"></cover-image>
+  <cover-image class="yy" src="/icon/yy.png"></cover-image>
+  <cover-image class="share" src="/icon/财神羊.png"></cover-image>
+</view>
+
+<view class="view2">
+  <view class="item_wel">欢迎使用本租车系统\n</view>
+  <text class="item_focus">~ 更多关于本系统的信息请持续关注www.gxdc.com ~</text>
+</view>

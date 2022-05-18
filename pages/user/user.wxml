@@ -1,0 +1,76 @@
+<view class="userinfo">
+  <!-- <button class="item_login"> 
+   登录
+  </button>
+  <button class="item_register"> 
+   注册
+  </button> -->
+  <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="userinfo-btn"> 点击微信授权 </button>
+  <block wx:else>
+    <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </block>
+  
+</view>
+
+<view class="separate"></view>
+
+<view class="order" >
+  <text class="myorder-text">我的乘车记录</text>
+  <text class="myorderlook-text">查看全部记录</text>
+</view>
+
+<view class="line"></view>
+
+<view class="navs">
+  <block wx:for-items="{{orderItems}}" wx:key="name">
+    <view class="nav-item" catchtap="toOrder" data-type="{{item.name}}" data-typeid="{{item.typeId}}">
+      <image src="{{item.imageurl}}" class="nav-image" />
+      <text>{{item.name}}</text>
+    </view>
+  </block>
+</view>
+
+<view class="separate" style="margin-bottom: 20rpx;"></view>
+<view class="person-list">
+  <view class="list-item">
+    <image class="item-image" src="/icon/地图.png"></image>
+    <text class="item-text" catchtap="toMap">主地图</text>
+    <image class="item-pointer0" src="/icon/u105.png"></image>
+  </view>
+  <view class="person-line"></view>
+  <view class="list-item">
+    <image class="item-image" src="/icon/优惠券.png"></image>
+    <text class="item-text">优惠券</text>
+    <image class="item-pointer0" src="/icon/u105.png"></image>
+  </view>
+  <view class="person-line"></view>
+  <view class="list-item">
+    <image class="item-image" src="/icon/活动.png"></image>
+    <text class="item-text">我的收藏</text>
+    <image class="item-pointer" src="/icon/u105.png"></image>
+  </view>
+  <view class="person-line"></view>
+  <view class="list-item">
+    <image class="item-image" src="/icon/评价0.png"></image>
+    <text class="item-text">我的评价</text>
+    <image class="item-pointer" src="/icon/u105.png"></image>
+  </view>
+  <view class="person-line"></view>
+  <view class="list-item">
+    <image class="item-image" src="/icon/记录.png"></image>
+    <text class="item-text">租车记录</text>
+    <image class="item-pointer" src="/icon/u105.png"></image>
+  </view>
+  <view class="person-line"></view>
+  <view class="list-item">
+    <image class="item-image" src="/icon/客服.png"></image>
+    <text class="item-text">在线客服</text>
+    <image class="item-pointer" src="/icon/u105.png"></image>
+  </view>
+  <view class="person-line"></view>
+  
+</view>   
+<view class="separate"></view>
+  
+  

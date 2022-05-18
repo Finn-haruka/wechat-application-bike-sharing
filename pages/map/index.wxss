@@ -1,0 +1,61 @@
+/* pages/map/index.wxss */
+page{
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+}
+map{
+  width: 100%;
+  height: 100%;
+}
+cover-image{
+  position: absolute;
+  bottom: 100rpx;
+  height: 110rpx;
+  width: 110rpx;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.location{
+  left: 50rpx;
+}
+.reservation{
+  bottom: 240rpx;
+  left: 50rpx;
+}
+.user{
+  right: 50rpx;
+}
+.now{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -60rpx;
+  margin-top: -60px;
+  background: none;
+  width: 120rpx;
+  height: 120rpx;
+}
+.plus{
+  top:5%;
+  left:5%;
+}
+.fault{
+  top:5%;
+  right:5%;
+}
+cover-view{
+  position: absolute;
+  bottom: 100rpx;
+  left: 50%;
+  margin-left: -90rpx;
+  height: 180rpx;
+  width: 180rpx;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 180rpx;
+  background-color: #51a9f1;
+  font-size: 18px;
+  color: #fff;
+  font-weight: bold;
+}

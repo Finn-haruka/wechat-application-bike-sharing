@@ -1,0 +1,156 @@
+<!--pages/reserve/reserve.wxml-->
+<view class="header">
+<view class="login-icon" indicator-dots indicator-color="white" 
+indicator-active-color="black" autoplay interval="5000" circular> 
+ 
+ <view>
+  <image class="login-img" src="/icon/xm3.png"></image> 
+ </view>
+ </view>
+</view>
+
+
+<view class="container">
+ <!-- 左侧栏 -->
+ <view class='nav_left'>
+ <view class="nav_left_items {{curNav == 1 ? 'active' : ''}}"
+ bindtap="switchRightTab" data-id="1">
+ 东苑
+ </view>
+ <view class="nav_left_items {{curNav == 2 ? 'active' : ''}}"
+ bindtap="switchRightTab" data-id="2">
+ 中苑
+ </view>
+ <view class="nav_left_items {{curNav == 3 ? 'active' : ''}}"
+ bindtap="switchRightTab" data-id="3">
+ 西苑
+ </view>
+ <view class="nav_left_items {{curNav == 4 ? 'active' : ''}}"
+ bindtap="switchRightTab" data-id="4">
+ 其他
+ </view>
+ </view>
+ <!-- 右侧栏 -->
+ <view class="nav_right">
+  <view wx:if="{{curNav==1}}">
+    <view class="tap">
+      <view class='select_box'>
+        <view class='select' catchtap='selectTap'>
+            <text class='select_text'>{{selectData[index]}}</text>
+            <image class='select_img {{selectShow&&"select_img_rotate"}}' src='/icon/u105.png'  background-size="contain"></image> 
+        </view>
+        <view class='option_box' 
+        style='height:{{selectShow?(selectData.length>5?325:selectData.length*50):0}}rpx;'>
+            <text class='option' wx:for='{{selectData}}' wx:key='this' data-index='{{index}}' catchtap='optionTap'>{{item}}</text>
+        </view>
+      </view>
+      <view class="nav_right_items" style="margin-top: 10rpx;width: 100%;">
+        <image src="/icon/自行车.png" style="margin-left: 70rpx;border: gray solid 1px; border-radius: 100%;padding: 15rpx;"></image>
+        <view style="font-size: 43rpx; font-family: 楷体;font-weight: 600;padding-left: 60rpx;">\n共享单车\n</view>
+        <text style="font-size: 43rpx; font-family: 楷体;font-weight: 600;margin-left: 55rpx;">10010~10014</text>
+      </view>
+    </view>
+    
+    <view class="submit">
+      <button class="loginBtn" type="primary" bindtap="submitButton">确定</button> 
+      <button class="quitBtn" type="primary" bindtap="quitButton">取消</button> 
+    </view>
+  </view>
+    <view wx:if="{{curNav==2}}">
+      <view class="tap">
+        <view class='select_box'>
+          <view class='select' catchtap='selectTap'>
+              <text class='select_text'>{{selectData1[index]}}</text>
+              <image class='select_img {{selectShow&&"select_img_rotate"}}' src='/icon/u105.png'  background-size="contain"></image> 
+          </view>
+          <view class='option_box' 
+          style='height:{{selectShow?(selectData.length>5?325:selectData.length*50):0}}rpx;'>
+              <text class='option' wx:for='{{selectData1}}' wx:key='this' data-index='{{index}}' catchtap='optionTap'>{{item}}</text>
+          </view>
+        </view>
+        <view class="nav_right_items" style="margin-top: 10rpx;width: 100%;">
+          <image src="/icon/自行车.png" style="margin-left: 70rpx;border: gray solid 1px; border-radius: 100%;padding: 15rpx;"></image>
+          <view style="font-size: 43rpx; font-family: 楷体;font-weight: 600;padding-left: 60rpx;">\n共享单车\n</view>
+          <text style="font-size: 43rpx; font-family: 楷体;font-weight: 600;margin-left: 55rpx;">10015~10019</text>
+        </view>
+      </view>
+
+      
+
+      <view class="submit">
+        <button class="loginBtn" type="primary" bindtap="submitButton">确定</button> 
+        <button class="quitBtn" type="primary" bindtap="quitButton">取消</button> 
+      </view>
+    </view>
+
+    <view wx:if="{{curNav==3}}">
+      <view class="tap">
+        <view class='select_box'>
+          <view class='select' catchtap='selectTap'>
+              <text class='select_text'>{{selectData2[index]}}</text>
+              <image class='select_img {{selectShow&&"select_img_rotate"}}' src='/icon/u105.png'  background-size="contain"></image> 
+          </view>
+          <view class='option_box' 
+          style='height:{{selectShow?(selectData.length>5?325:selectData.length*50):0}}rpx;'>
+              <text class='option' wx:for='{{selectData2}}' wx:key='this' data-index='{{index}}' catchtap='optionTap'>{{item}}</text>
+          </view>
+        </view>
+        <view class="nav_right_items" style="margin-top: 10rpx;width: 100%;">
+          <image src="/icon/自行车.png" style="margin-left: 70rpx;border: gray solid 1px; border-radius: 100%;padding: 15rpx;"></image>
+          <view style="font-size: 43rpx; font-family: 楷体;font-weight: 600;padding-left: 60rpx;">\n共享单车\n</view>
+          <text style="font-size: 43rpx; font-family: 楷体;font-weight: 600;margin-left: 55rpx;">10020~10024</text>
+        </view>
+      </view>
+      
+      
+      <view class="submit">
+        <button class="loginBtn" type="primary" bindtap="submitButton">确定</button> 
+        <button class="quitBtn" type="primary" bindtap="quitButton">取消</button> 
+      </view>
+    </view>
+    <view wx:if="{{curNav==4}}">
+      <view class = "info">
+        <view style="text-align: center;position: flex;margin-bottom: 13rpx; font-weight: 600; font-family: 楷体; font-size: 45rpx">信息公告</view>
+        <!-- <button class="getInfo" size="mini" type="primary" bindtap="searchButton2" style="margin:0 0 40rpx 125rpx;">查看可预约车辆</button>
+        <button class="getInfo" size="mini" type="warn" bindtap="searchButton1" style="margin:0 0 40rpx 125rpx;">查看已租用车辆</button>
+        <button class="getInfo" size="mini" type="warn" bindtap="searchButton3" style="margin:0 0 40rpx 125rpx;">查看已损坏车辆</button>
+        <button class="getInfo" size="mini" type="warn" bindtap="searchButton4" style="margin:0 0 50rpx 125rpx;">查看已预约车辆</button>
+        <button class="getInfo" size="mini" type="warn" bindtap="searchButton5" style="margin:0 0 20rpx 165rpx;">取消预约</button> -->
+
+        <view class="blank" bindtap="searchButton2">
+          <view class="input_content">
+            <cover-image src="/icon/tsg.png" class="input_image"></cover-image>
+            <view class="input_text">查看可预约车辆\n2022-5-1</view>
+          </view>
+          
+        </view>
+        <view class="blank" bindtap="searchButton1">
+          <view class="input_content">
+            <cover-image src="/icon/mdl.png" class="input_image"></cover-image>
+            <view class="input_text">查看已租用车辆\n2022-5-1</view>
+          </view>
+        </view>
+        <view class="blank" bindtap="searchButton3">
+          <view class="input_content">
+            <cover-image src="/icon/cs3.png" class="input_image"></cover-image>
+            <view class="input_text">查看已损坏车辆\n2022-5-1</view>
+          </view>
+        </view>
+        <view class="blank" bindtap="searchButton4">
+          <view class="input_content">
+            <cover-image src="/icon/ldxy.png" class="input_image"></cover-image>
+            <view class="input_text">查看已预约车辆\n2022-5-1</view>
+          </view>
+        </view>
+        <view class="blank" bindtap="searchButton5">
+          <view class="input_content">
+            <cover-image src="/icon/sxl.png" class="input_image"></cover-image>
+            <view class="input_text">车辆预约取消\n2022-5-1</view>
+          </view>
+        </view>
+      </view>
+        
+    </view>
+
+  </view>
+</view>

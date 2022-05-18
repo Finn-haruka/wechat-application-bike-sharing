@@ -1,0 +1,47 @@
+<!--pages/login2/login2.wxml-->
+<!-- <div style="border: 1px;">
+  <input style="margin: 20px; " type="text" placeholder="用户名" bindinput="input_name"/>
+  <input style="margin: 20px; " type="text" placeholder="密码" bindinput="input_pwd"/>
+</div>
+
+<button bindtap="submitButton">登录</button> -->
+
+
+<view class="container"> 
+ 
+ <view class="login-icon"> 
+ <image class="login-img" src="/icon/xm2.png"></image> 
+ </view> 
+ <view class="login-from"> 
+ 
+ <!--账号-->
+ <view class="inputView"> 
+  <image class="nameImage" src="/icon/用户.png"></image> 
+  <label class="loginLab">账号</label> 
+  <input class="inputText" placeholder="请输入用户名" bindinput="input_name" /> 
+ </view> 
+ <view class="line"></view> 
+ 
+ <!--密码-->
+ <view class="inputView"> 
+  <image class="keyImage" src="/icon/密码.png"></image> 
+  <label class="loginLab">密码</label> 
+  <input class="inputText" password="true" placeholder="请输入密码" bindinput="input_pwd" /> 
+ </view> 
+ 
+ <!--按钮-->
+ <view class="loginBtnView"> 
+  <button class="loginBtn" type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="submitButton">登录</button> 
+  <!-- <button class="RegisterBtn" type="primary" bindtap="submitButton">注册</button>  -->
+  <button class="registerBtn" bindtap="registerButton">
+    还没有账号？点击注册~
+  </button>
+ </view> 
+ </view> 
+</view>
+
+<!-- <view class="registerBtnView">
+  <button class="registerBtn" bindtap="registerButton">
+    还没有账号？点击注册~
+  </button>
+</view> -->

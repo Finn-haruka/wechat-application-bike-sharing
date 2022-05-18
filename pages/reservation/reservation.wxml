@@ -1,0 +1,63 @@
+<!--pages/reservation/reservation.wxml-->
+<!-- <view class='view'>
+  <text class='view-text'>预约选择</text>
+  <view class='select'>
+
+    <view class='select1'>
+      <text>预约车号</text>
+      <picker value="{{index}}" range="{{array}}" bindchange='varietiesChange'>
+        <view>
+          <text>{{Varieties}}</text>
+          <image src='../icon/u105.png'></image>
+        </view>
+      </picker>
+    </view>
+
+  </view>
+</view> -->
+
+
+
+<view class='view'>
+  <text class='view-text'>预约信息</text>
+  <view class='view1'>
+
+    <view class='view3'>
+      <text>车辆号牌</text>
+      <picker value="{{index}}" range="{{array}}" bindchange='varietiesChange'>
+        <view>
+          <text>{{Varieties}}</text>
+          <image src='../../icon/u105.png' />
+        </view>
+      </picker>
+    </view>
+
+    <view class='view3'>
+      <text>确定选择</text>
+      <picker value="{{index}}" range="{{array}}" bindchange='warehouseChange'>
+        <view>
+          <text>{{Warehouse}}</text>
+          <image src='../../icon/u105.png' />
+        </view>
+      </picker>
+    </view>
+
+
+    <view class='view3'>
+      <text>预约时间</text>
+      <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+        <view>
+          <text>{{orderData}}</text>
+          <image src='../../icon/u105.png' />
+        </view>
+      </picker>
+
+    </view>
+  </view>
+
+  
+  
+</view>
+
+
+

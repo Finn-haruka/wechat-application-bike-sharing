@@ -1,0 +1,108 @@
+/* pages/fault/fault.wxss */
+view{
+  width: 100%;
+}
+.wrapper{
+  background-color: #f2f2f2;
+}
+.head{
+  height: 70rpx;
+  /* padding-left: 275rpx; */
+}
+.head>text{
+  text-align: center;
+  font-size: 34rpx;  
+  color: gray;  
+  margin-left: 225rpx;  
+  padding-bottom: 5rpx;
+}
+.head>image{
+  margin-left:15rpx;
+  width: 40rpx;
+  height: 40rpx;
+
+}
+.option{
+  height: 425rpx;
+  padding-top: 40rpx;
+  background-color: #fff;
+}
+.group{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.check-box{
+  width: 250rpx;
+  height: 100rpx;
+  border: 1px solid #030300;
+  border-radius: 8px;
+  text-align: center;
+  line-height: 100rpx;
+  margin: 0 40rpx;
+}
+.oImg{
+  width: 100%;
+  background-color: #fff;
+}
+.oImg-title{
+  display: block;
+  font-size: 34rpx;
+  text-align: center;
+  color:gray;
+  background-color: #f2f2f2;
+  line-height: 80rpx;
+  padding-left: 40rpx;
+}
+.photo{
+  display: inline-block;
+  width: 150rpx;
+  height: 150rpx;
+  margin: 20rpx;
+  margin-right: 10rpx;
+}
+.photo image{
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+icon{
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: -8px;
+  margin-top: -8px;
+}
+.img-text{
+  display: inline-block;
+  width: 150rpx;
+  height: 150rpx;
+  text-align: center;
+  line-height: 150rpx;
+  font-size: 13px;
+  border: 2px dashed #999;
+  vertical-align: top;
+  margin: 20rpx;
+}
+.num{
+  margin: 25rpx 0;
+}
+input{
+  display: block;
+  height: 90rpx;
+  line-height: 90rpx;
+  background-color: #fff;
+  padding: 0 40rpx;
+}
+.put1,.put2{
+  font-size: 35rpx;
+  border-bottom: 2px solid #f2f2f2;
+}
+button{
+  width: 80%;
+  margin-bottom: 30rpx;
+}

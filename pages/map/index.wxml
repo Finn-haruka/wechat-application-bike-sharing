@@ -1,0 +1,18 @@
+<!--pages/map/index.wxml-->
+<map 
+  id="myMap" 
+  longitude="{{longitude}}" 
+  latitude="{{latitude}}" 
+  scale="16"
+  markers="{{markers}}"
+  bindregionchange="regionchange"
+  show-location
+> <cover-image catchtap="click" id="1" class="location" src="/icon/定位1.png"></cover-image>
+<cover-view catchtap="click" id="2" class="use">立即使用</cover-view>
+<cover-image catchtap="click" id="3" class="fault" src="/icon/设备报警.png"></cover-image>
+  <cover-image catchtap="click" id="4" class="user" src="/icon/user.png"></cover-image>
+  <cover-image id="5" class="now" src="/icon/iconfont-addr.png"></cover-image>
+  <cover-image id="6" catchtap="click" id="6" class="plus" src="/icon/plus.png"></cover-image>
+  <cover-image id="7" catchtap="click" id="7" class="reservation" src="/icon/预约查档.png"></cover-image>
+</map>
+

@@ -1,0 +1,232 @@
+<!--pages/navigation/navigation.wxml-->
+<scroll-view scroll-x class='scrollx' >
+  <navigator  open-type="redirect" catchtap='hx_door'>校门</navigator>
+  <navigator  open-type="redirect" catchtap='hx_canteen'>食堂</navigator>
+  <navigator  open-type="redirect" catchtap='hx_supermarket'>便利店</navigator>
+  <navigator  open-type="redirect" catchtap='hx_teach'>教学楼</navigator>
+  <navigator  open-type="redirect" catchtap='hx_playground'>体育馆</navigator>
+  <navigator  open-type="redirect" catchtap='hx_library'>图书馆</navigator>
+  <navigator  open-type="redirect" catchtap='hx_park'>停车点</navigator> 
+</scroll-view>
+
+<map
+  id="map"
+  longitude="{{longitude}}"
+  latitude="{{latitude}}"
+  scale="{{scale}}"
+  style="width: 100%; height: 300px;"
+  markers='{{markers}}' 
+  show-location='true'  
+  bindcallouttap='click' 
+  bindmarkertap='background'
+></map>
+
+<view  class='bottom' style='bottom:{{bootom}};' wx:if="{{hx_door}}"> 
+  <cover-view class='hx_bottomtext'>校门</cover-view>
+  <view class="page__bd">
+  <view class="weui-cells__title"></view>
+          <view class="weui-cells weui-cells_after-title">
+              <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                  <view class="weui-cell__hd">
+                      <image src="../../icon/xm.png" class='hx_img'></image>
+                  </view>
+                  <view class="weui-cell__bd">南京信息工程大学东门</view>      
+                  <cover-image id='door1' style='width:25px;height:25px' catchtap='go' src='../../icon/home_.png' mode='aspectFit'></cover-image>          
+              </navigator>
+              <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                  <view class="weui-cell__hd">
+                      <image src="../../icon/xm2.png" class='hx_img'></image>
+                  </view>
+                  <view class="weui-cell__bd">南京信息工程大学西北门</view>      
+                  <cover-image id='door2' style='width:25px;height:25px' catchtap='go' src='../../icon/home_.png' mode='aspectFit'></cover-image>          
+              </navigator>
+              <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                  <view class="weui-cell__hd">
+                      <image src="../../icon/xm3.png" class='hx_img'></image>
+                  </view>
+                  <view class="weui-cell__bd">南京信息工程大学东南门</view>      
+                  <cover-image id='door3' style='width:25px;height:25px' catchtap='go' src='../../icon/home_.png' mode='aspectFit'></cover-image>          
+              </navigator>
+            </view>
+  </view>
+</view>
+
+<view  class='bottom' style='bottom:{{bootom}};' wx:if="{{hx_canteen}}"> 
+  <cover-view class='hx_bottomtext'>食堂</cover-view>
+  <view class="page__bd">
+  <view class="weui-cells__title"></view>
+          <view class="weui-cells weui-cells_after-title">
+              <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                  <view class="weui-cell__hd">
+                      <image src="../../icon/st1.png" class='hx_img'></image>
+                  </view>
+                  <view class="weui-cell__bd">南京信息工程大学中苑食堂</view>      
+                  <cover-image id='canteen1' style='width:25px;height:25px' catchtap='go' src='../../icon/home_.png' mode='aspectFit'></cover-image>          
+              </navigator>
+              <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                  <view class="weui-cell__hd">
+                      <image src="../../icon/st2.png" class='hx_img'></image>
+                  </view>
+                  <view class="weui-cell__bd">南京信息工程大学西苑食堂</view>      
+                  <cover-image id='canteen2' style='width:25px;height:25px' catchtap='go' src='../../icon/home_.png' mode='aspectFit'></cover-image>          
+              </navigator>
+              <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                  <view class="weui-cell__hd">
+                      <image src="../../icon/st3.png" class='hx_img'></image>
+                  </view>
+                  <view class="weui-cell__bd">南京信息工程大学东苑食堂</view>      
+                  <cover-image id='canteen3' style='width:25px;height:25px' catchtap='go' src='../../icon/home_.png' mode='aspectFit'></cover-image>          
+              </navigator>
+              <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                  <view class="weui-cell__hd">
+                      <image src="../../icon/st4.png" class='hx_img'></image>
+                  </view>
+                  <view class="weui-cell__bd">南京信息工程大学教工食堂</view>      
+                  <cover-image id='canteen4' style='width:25px;height:25px' catchtap='go' src='../../icon/home_.png' mode='aspectFit'></cover-image>          
+              </navigator>
+            </view>
+  </view>
+</view>
+
+<view  class='bottom' style='bottom:{{bootom}};' wx:if="{{hx_supermarket}}"> 
+  <cover-view class='hx_bottomtext'>便利店</cover-view>
+  <view class="page__bd">
+  <view class="weui-cells__title"></view>
+          <view class="weui-cells weui-cells_after-title">
+              <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                  <view class="weui-cell__hd">
+                      <image src="../../icon/cs1.png" class='hx_img'></image>
+                  </view>
+                  <view class="weui-cell__bd">南京信息工程大学天猫便利店</view>      
+                  <cover-image id='supermarket1' style='width:25px;height:25px' catchtap='go' src='../../icon/home_.png' mode='aspectFit'></cover-image>          
+              </navigator>
+              <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                  <view class="weui-cell__hd">
+                      <image src="../../icon/cs2.png" class='hx_img'></image>
+                  </view>
+                  <view class="weui-cell__bd">南京信息工程大学711便利店</view>      
+                  <cover-image id='supermarket2' style='width:25px;height:25px' catchtap='go' src='../../icon/home_.png' mode='aspectFit'></cover-image>          
+              </navigator>
+              <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                  <view class="weui-cell__hd">
+                      <image src="../../icon/cs3.png" class='hx_img'></image>
+                  </view>
+                  <view class="weui-cell__bd">南京信息工程大学京东便利店</view>      
+                  <cover-image id='supermarket3' style='width:25px;height:25px' catchtap='go' src='../../icon/home_.png' mode='aspectFit'></cover-image>          
+              </navigator>
+            </view>
+  </view>
+</view>
+
+<view  class='bottom' style='bottom:{{bootom}};' wx:if="{{hx_teach}}"> 
+  <cover-view class='hx_bottomtext'>教学楼</cover-view>
+  <view class="page__bd">
+  <view class="weui-cells__title"></view>
+          <view class="weui-cells weui-cells_after-title">
+              <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                  <view class="weui-cell__hd">
+                      <image src="../../icon/sxl.png" class='hx_img'></image>
+                  </view>
+                  <view class="weui-cell__bd">南京信息工程大学尚贤楼</view>      
+                  <cover-image id='teach1' style='width:25px;height:25px' catchtap='go' src='../../icon/home_.png' mode='aspectFit'></cover-image>          
+              </navigator>
+              <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                  <view class="weui-cell__hd">
+                      <image src="../../icon/mdl.png" class='hx_img'></image>
+                  </view>
+                  <view class="weui-cell__bd" >南京信息工程大学明德楼</view>      
+                  <cover-image id='teach2' style='width:25px;height:25px' catchtap='go' src='../../icon/home_.png' mode='aspectFit'></cover-image>          
+              </navigator>
+              <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                  <view class="weui-cell__hd">
+                      <image src="../../icon/wdl.png" class='hx_img'></image>
+                  </view>
+                  <view class="weui-cell__bd">南京信息工程大学文德楼</view>      
+                  <cover-image id='teach3' style='width:25px;height:25px' catchtap='go' src='../../icon/home_.png' mode='aspectFit'></cover-image>          
+              </navigator>
+              <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                  <view class="weui-cell__hd">
+                      <image src="../../icon/ldxy.png" class='hx_img'></image>
+                  </view>
+                  <view class="weui-cell__bd">南京信息工程大学雷丁学院</view>      
+                  <cover-image id='teach4' style='width:25px;height:25px' catchtap='go' src='../../icon/home_.png' mode='aspectFit'></cover-image>          
+              </navigator>
+              <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                  <view class="weui-cell__hd">
+                      <image src="../../icon/bjl.png" class='hx_img'></image>
+                  </view>
+                  <view class="weui-cell__bd">南京信息工程大学滨江楼</view>      
+                  <cover-image id='teach5' style='width:25px;height:25px' catchtap='go' src='../../icon/home_.png' mode='aspectFit'></cover-image>          
+              </navigator>
+              <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                  <view class="weui-cell__hd">
+                      <image src="../../icon/yfl.png" class='hx_img'></image>
+                  </view>
+                  <view class="weui-cell__bd">南京信息工程大学逸夫楼</view>      
+                  <cover-image id='teach6' style='width:25px;height:25px' catchtap='go' src='../../icon/home_.png' mode='aspectFit'></cover-image>          
+              </navigator>
+            </view>
+  </view>
+</view>
+
+<view  class='bottom' style='bottom:{{bootom}};' wx:if="{{hx_playground}}"> 
+  <cover-view class='hx_bottomtext'>体育馆</cover-view>
+  <view class="page__bd">
+  <view class="weui-cells__title"></view>
+          <view class="weui-cells weui-cells_after-title">
+              <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                  <view class="weui-cell__hd">
+                      <image src="../../icon/tyg.png" class='hx_img'></image>
+                  </view>
+                  <view class="weui-cell__bd">南京信息工程大学体育馆</view>      
+                  <cover-image id='park' style='width:25px;height:25px' catchtap='go' src='../../icon/home_.png' mode='aspectFit'></cover-image>          
+              </navigator>
+            </view>
+  </view>
+</view>
+
+<view  class='bottom' style='bottom:{{bootom}};' wx:if="{{hx_library}}"> 
+  <cover-view class='hx_bottomtext'>体育馆</cover-view>
+  <view class="page__bd">
+  <view class="weui-cells__title"></view>
+          <view class="weui-cells weui-cells_after-title">
+              <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                  <view class="weui-cell__hd">
+                      <image src="../../icon/tsg.png" class='hx_img'></image>
+                  </view>
+                  <view class="weui-cell__bd">南京信息工程大学图书馆</view>      
+                  <cover-image id='library' style='width:25px;height:25px' catchtap='go' src='../../icon/home_.png' mode='aspectFit'></cover-image>          
+              </navigator>
+            </view>
+  </view>
+</view>
+
+<view  class='bottom' style='bottom:{{bootom}};' wx:if="{{hx_park}}"> 
+  <cover-view class='hx_bottomtext'>停车点</cover-view>
+  <view class="page__bd">
+  <view class="weui-cells__title"></view>
+          <view class="weui-cells weui-cells_after-title">
+              <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                  <view class="weui-cell__hd">
+                      <image src="../../icon/bike2.png" class='hx_img'></image>
+                  </view>
+                  <view class="weui-cell__bd">共享单车停车点（东苑）</view>      
+                  <cover-image id='park1' style='width:25px;height:25px' catchtap='go' src='../../icon/home_.png' mode='aspectFit'></cover-image>          
+              </navigator>
+              <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                  <view class="weui-cell__hd">
+                      <image src="../../icon/bike3.png" class='hx_img'></image>
+                  </view>
+                  <view class="weui-cell__bd">共享单车停车点（中苑）</view>      
+                  <cover-image id='park2' style='width:25px;height:25px' catchtap='go' src='../../icon/home_.png' mode='aspectFit'></cover-image>          
+              </navigator>
+              <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                  <view class="weui-cell__hd">
+                      <image src="../../icon/bike4.png" class='hx_img'></image>
+                  </view>
+                  <view class="weui-cell__bd">共享单车停车点（西苑）</view>      
+                  <cover-image id='park3' style='width:25px;height:25px' catchtap='go' src='../../icon/home_.png' mode='aspectFit'></cover-image>          
+              </navigator>
+            </view>
+  </view>
+</view>

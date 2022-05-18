@@ -1,0 +1,28 @@
+{
+  "pages": [
+    "pages/login/index",
+    "pages/map/index",
+    "pages/fault/fault",
+    "pages/user/user",
+    "pages/more/more",
+    "pages/wallet/wallet",
+    "pages/reservation/reservation",
+    "pages/navigation/navigation",
+    "pages/register/register",
+    "pages/reserve/reserve",
+    "pages/money/money",
+    "pages/login2/login2"
+
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#eeeeee",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "共享单车"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "请允许应用获取您的地理位置" 
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

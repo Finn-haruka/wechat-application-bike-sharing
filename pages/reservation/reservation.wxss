@@ -1,0 +1,88 @@
+/* pages/reservation/reservation.wxss */
+
+page {
+  background: #eeeef3;
+  
+}
+
+.bgimage {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -1;
+}
+
+.view {
+  flex-direction: column;
+  display: flex;
+}
+
+.view-text {
+  padding-left: 15px;
+  color: #1890fe;
+  height: 40px;
+  border-bottom:  1px    double  #1890fe; 
+  display: flex;
+  align-items: center ;
+  justify-content: center left;
+ font-size: 14px;
+}
+
+.view1 {
+  margin-right: 20px;
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  background: white;
+  
+}
+
+
+.view3 {
+  height: 42px;
+  display: flex;
+  margin-left: 15px;
+  margin-right: 15px;
+  align-items: center;
+  border-bottom:  1px    double  #eeeef3; 
+  flex-direction: row;
+  font-size: 14px;
+}
+
+.view3 text {
+  color: #999;
+  width: 90px;
+}
+
+.view3 picker {
+  width: 90%;
+  margin-left: 17px;
+}
+.view3 picker view{
+  display: flex;
+   align-items: center;
+  flex-direction: row;
+}
+.view3 picker text {
+  float: left;
+  font-size: 14px;
+  width: 100%;
+  color: #999;
+}
+
+.view3  image {
+  width: 15px;
+  margin-left: 10px;
+  height: 15px;
+}
+
+cover-image{
+  position: absolute;
+  bottom: 100rpx;
+  height: 100rpx;
+  width: 100rpx;
+}
+
+
+
+

@@ -1,0 +1,8 @@
+<!--pages/money/money.wxml-->
+<view class="wrapper">
+  <view class="put">
+    <text>请输入充值金额</text>
+    <input bindinput="put" placeholder='请输入金额' type="number"></input>
+    <button bindtap="click">充值</button>
+  </view>
+</view>
